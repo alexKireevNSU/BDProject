@@ -1,0 +1,1 @@
+﻿UPDATE TTradePoints SET name = '{0}', TypeID = {1} WHERE TPID = {2}

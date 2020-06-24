@@ -1,0 +1,1 @@
+﻿Select tp.TPID id, tp.name name, tp.TypeID typeId, t.name type From TTradePoints tp LEFT JOIN TTypes t ON tp.TypeID = t.TypeID

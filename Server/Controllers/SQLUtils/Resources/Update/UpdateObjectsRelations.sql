@@ -1,0 +1,1 @@
+UPDATE TObjectsRelations SET ParentID = {0}, ID = {1} WHERE ObjRelID = {2}

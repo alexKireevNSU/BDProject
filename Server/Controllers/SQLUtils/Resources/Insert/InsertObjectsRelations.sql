@@ -1,0 +1,1 @@
+INSERT INTO TObjectsRelations VALUES(DEFAULT, {0}, {1})

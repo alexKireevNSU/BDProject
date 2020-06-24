@@ -1,0 +1,1 @@
+DELETE FROM TObjectsRelations WHERE ObjRelID = {0}

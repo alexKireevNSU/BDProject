@@ -1,0 +1,1 @@
+DELETE FROM TEmployeesList WHERE EmployeeID = {0}

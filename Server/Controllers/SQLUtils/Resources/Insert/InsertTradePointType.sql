@@ -1,0 +1,1 @@
+﻿INSERT INTO TTypes VALUES(DEFAULT, '{0}')

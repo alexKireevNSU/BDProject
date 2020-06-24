@@ -1,0 +1,1 @@
+﻿DELETE FROM TTypes WHERE TypeID = {0}

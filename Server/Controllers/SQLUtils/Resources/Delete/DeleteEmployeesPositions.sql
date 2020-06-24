@@ -1,0 +1,1 @@
+DELETE FROM TEmployeesPositions WHERE EPID = {0}

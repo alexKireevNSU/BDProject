@@ -1,0 +1,2 @@
+﻿CREATE VIEW VEmployees AS
+SELECT e.EmID as "Employee ID", e.name as "Employee Name", ep.EPID as "Position ID", ep.name as "Position", tp.TPID as "Trade Point ID", tp.name as "Trade Point", t.TypeID as "Trade Point Type ID", t.name "Trade Point Type" FROM TEmployees e LEFT JOIN TEmployeesList el ON e.EmID = el.EmployeeID LEFT JOIN TEmployeesPositions ep ON el.PositionID = ep.EPID LEFT JOIN TTradePoints tp ON el.TradePointID = tp.TPID LEFT JOIN TTypes t ON t.TypeID = tp.TypeID

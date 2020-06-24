@@ -1,0 +1,1 @@
+UPDATE TEmployeesPositions SET name = '{0}' WHERE EPID = {1}

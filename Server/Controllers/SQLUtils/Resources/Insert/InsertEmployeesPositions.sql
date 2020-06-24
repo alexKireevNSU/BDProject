@@ -1,0 +1,1 @@
+INSERT INTO TEmployeesPositions VALUES(DEFAULT, '{0}')

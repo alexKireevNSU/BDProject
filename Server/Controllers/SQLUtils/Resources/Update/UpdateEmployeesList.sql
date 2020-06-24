@@ -1,0 +1,1 @@
+UPDATE TEmployeesList SET TradePointID = {0}, PositionID = {1} WHERE EmployeeID = {2}
