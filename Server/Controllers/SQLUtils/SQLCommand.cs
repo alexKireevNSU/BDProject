@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Web;
 
 namespace Server.Controllers.SQLUtils
 {
@@ -14,7 +15,7 @@ namespace Server.Controllers.SQLUtils
             if (cachedCommand != null && cachedCommand.Length != 0)
                 return cachedCommand;
 
-            cachedCommand = File.ReadAllText(commandPath);
+            cachedCommand = File.ReadAllText(HttpContext.Current.Server.MapPath(commandPath));
 
             return cachedCommand;
         }
@@ -218,7 +219,7 @@ namespace Server.Controllers.SQLUtils
             return GetCommand(ref deleteEmployeesList, deleteEmployeesListPath, new string[] { employee.Id.ToString() });
         }
 
-        private static String cmdFolder = "D:\\Repositories\\Visual Studio Projects\\BDProject\\Server\\Server\\Controllers\\SQLUtils\\Resources\\";
+        private static String cmdFolder = "Controllers\\SQLUtils\\Resources\\";
         private static String createFolder = cmdFolder + "CreatingDB\\";
         private static String selectFolder = cmdFolder + "Select\\";
         private static String insertFolder = cmdFolder + "Insert\\";

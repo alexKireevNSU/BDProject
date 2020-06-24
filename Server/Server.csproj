@@ -284,35 +284,81 @@
     <Content Include="Controllers\SQLUtils\Resources\CreatingDB\CreateTTypes.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Controllers\SQLUtils\Resources\CreatingDB\CreateVEmployees.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteEmployees.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteEmployeesList.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteEmployeesPositions.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteObjectsRelations.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteTradePoint.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteTradePointType.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertEmployees.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertEmployeesList.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertEmployeesPositions.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertObjectsRelations.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertTradePoint.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertTradePointType.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\CreatingDB\CreateVEmployees.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteEmployees.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteEmployeesList.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteEmployeesPositions.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteObjectsRelations.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteTradePoint.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteTradePointType.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertEmployees.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertEmployeesList.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertEmployeesPositions.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertObjectsRelations.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertTradePoint.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertTradePointType.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllEmployees.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllEmployeesPositions.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllObjectsRelations.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllTradePoints.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllTradePointsTypes.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllEmployeesPositions.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllObjectsRelations.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllTradePoints.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllTradePointsTypes.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Controllers\SQLUtils\Resources\Select\SelectFromTest.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateEmployees.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateEmployeesList.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateEmployeesPositions.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateObjectsRelations.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateTradePoint.sql" />
-    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateTradePointType.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateEmployees.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateEmployeesList.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateEmployeesPositions.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateObjectsRelations.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateTradePoint.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateTradePointType.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
