@@ -15,8 +15,7 @@ namespace Server.Controllers.SQLUtils
             if (cachedCommand != null && cachedCommand.Length != 0)
                 return cachedCommand;
 
-            cachedCommand = File.ReadAllText(HttpContext.Current.Server.MapPath(commandPath));
-
+            cachedCommand = File.ReadAllText("D:\\Repositories\\Visual Studio Projects\\BDProject\\Server\\Server\\" + (commandPath));
             return cachedCommand;
         }
         private static String GetCommand(ref String cachedCommand, String commandPath, string[] valArr)
@@ -137,6 +136,18 @@ namespace Server.Controllers.SQLUtils
         {
             return GetCommand(ref selectAllEmployeesPositions, selectAllEmployeesPositionsPath);
         }
+        public static string SelectAllParents()
+        {
+            return GetCommand(ref selectAllParents, selectAllParentsPath);
+        }
+        public static string SelectParent(int id)
+        {
+            return GetCommand(ref selectParent, selectParentPath, new string[] { id.ToString() });
+        }
+        internal static string SelectTradePointPayments(int id)
+        {
+            return GetCommand(ref selectTradePointPayments, selectTradePointPaymentsPath, new string[] { id.ToString() });
+        }
 
         /* inserts */
 
@@ -146,7 +157,7 @@ namespace Server.Controllers.SQLUtils
         }
         public static String InsertTradePoint(TradePoint point)
         {
-            return GetCommand(ref insertTradePoint, insertTradePointPath, new string[] { point.Name, point.Type.Id.ToString() });
+            return GetCommand(ref insertTradePoint, insertTradePointPath, new string[] { point.Name, point.Type.Id.ToString(), point.Size.ToString(), point.NumberOfCounters.ToString() });
         }
         public static String InsertObjectsRelations(ObjectRelation relation)
         {
@@ -164,6 +175,10 @@ namespace Server.Controllers.SQLUtils
         {
             return GetCommand(ref insertEmployeesList, insertEmployeesListPath, new string[] { employee.TradePoint.Id.ToString(), employee.Id.ToString(), employee.Position.Id.ToString() });
         }
+        public static String InsertTradePointPayment(TradePointPayment payment)
+        {
+            return GetCommand(ref insertTradePointPayment, insertTradePointPaymentPath, new string[] { payment.Id.ToString(), payment.Name, payment.Sum.ToString(), payment.Date.ToString("YYYY/MM/DD") });
+        }
 
         /* updated */
 
@@ -173,7 +188,7 @@ namespace Server.Controllers.SQLUtils
         }
         public static String UpdateTradePoint(TradePoint point)
         {
-            return GetCommand(ref updateTradePoint, updateTradePointPath, new string[] { point.Name, point.Type.Id.ToString(), point.Id.ToString() });
+            return GetCommand(ref updateTradePoint, updateTradePointPath, new string[] { point.Name, point.Type.Id.ToString(), point.Size.ToString(), point.NumberOfCounters.ToString(), point.Id.ToString() });
         }
         public static String UpdateObjectsRelations(ObjectRelation relation)
         {
@@ -190,6 +205,10 @@ namespace Server.Controllers.SQLUtils
         public static String UpdateEmployeesList(Employee employee)
         {
             return GetCommand(ref updateEmployeesList, updateEmployeesListPath, new string[] { employee.TradePoint.Id.ToString(), employee.Position.Id.ToString(), employee.Id.ToString() });
+        }
+        public static String UpdateTradePointPayment(TradePointPayment payment)
+        {
+            return GetCommand(ref updateTradePointPayment, updateTradePointPaymentPath, new string[] { payment.Name, payment.Sum.ToString(), payment.Date.ToString("YYYY/MM/DD"), payment.Id.ToString() });
         }
 
         /* deletes */
@@ -218,6 +237,10 @@ namespace Server.Controllers.SQLUtils
         {
             return GetCommand(ref deleteEmployeesList, deleteEmployeesListPath, new string[] { employee.Id.ToString() });
         }
+        public static String DeleteTradePointPayment(int id)
+        {
+            return GetCommand(ref deleteTradePointPayment, deleteTradePointPaymentPath, new string[] { id.ToString() });
+        }
 
         private static String cmdFolder = "Controllers\\SQLUtils\\Resources\\";
         private static String createFolder = cmdFolder + "CreatingDB\\";
@@ -238,6 +261,12 @@ namespace Server.Controllers.SQLUtils
         private static String selectAllObjectsRelationsPath = selectFolder + "SelectAllObjectsRelations.sql";
         private static String selectAllEmployeesPositions = null;
         private static String selectAllEmployeesPositionsPath = selectFolder + "SelectAllEmployeesPositions.sql";
+        private static String selectAllParents = null;
+        private static String selectAllParentsPath = selectFolder + "SelectAllParents.sql";
+        private static String selectParent = null;
+        private static String selectParentPath = selectFolder + "SelectParent.sql";
+        private static String selectTradePointPayments = null;
+        private static String selectTradePointPaymentsPath = selectFolder + "SelectTradePointPayments.sql";
 
         private static String insertTradePointType = null;
         private static String insertTradePointTypePath = insertFolder + "InsertTradePointType.sql";
@@ -251,6 +280,8 @@ namespace Server.Controllers.SQLUtils
         private static String insertEmployeesPath = insertFolder + "InsertEmployees.sql";
         private static String insertEmployeesList = null;
         private static String insertEmployeesListPath = insertFolder + "InsertEmployeesList.sql";
+        private static String insertTradePointPayment = null;
+        private static String insertTradePointPaymentPath = insertFolder + "InsertTradePointPayment.sql";
 
         private static String updateTradePointType = null;
         private static String updateTradePointTypePath = updateFolder + "UpdateTradePointType.sql";
@@ -264,6 +295,8 @@ namespace Server.Controllers.SQLUtils
         private static String updateEmployeesPath = updateFolder + "UpdateEmployees.sql";
         private static String updateEmployeesList = null;
         private static String updateEmployeesListPath = updateFolder + "UpdateEmployeesList.sql";
+        private static String updateTradePointPayment = null;
+        private static String updateTradePointPaymentPath = updateFolder + "UpdateTradePointPayment.sql";
 
         private static String deleteTradePointType = null;
         private static String deleteTradePointTypePath = deleteFolder + "DeleteTradePointType.sql";
@@ -277,6 +310,8 @@ namespace Server.Controllers.SQLUtils
         private static String deleteEmployeesPath = deleteFolder + "DeleteEmployees.sql";
         private static String deleteEmployeesList = null;
         private static String deleteEmployeesListPath = deleteFolder + "DeleteEmployeesList.sql";
+        private static String deleteTradePointPayment = null;
+        private static String deleteTradePointPaymentPath = deleteFolder + "DeleteTradePointPayment.sql";
 
         private static String createTTypes = null;
         private static String createTTypesPath = createFolder + "CreateTSuppliers.sql";

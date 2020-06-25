@@ -1,0 +1,1 @@
+﻿SELECT * FROM vtradepointsfullnames fn Inner join TObjectsRelations rel on fn.ID = rel.ParentID Where rel.ID = {0}

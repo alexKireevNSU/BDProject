@@ -1,0 +1,1 @@
+﻿INSERT INTO TTradePointsPayments VALUES(DEFAULT, {0}, '{1}', {2}, TO_DATE('{3}', 'yyyy/mm/dd'))

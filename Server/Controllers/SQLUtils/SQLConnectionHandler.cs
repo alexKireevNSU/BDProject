@@ -11,6 +11,7 @@ namespace Server.Controllers.SQLUtils
         private static object syncRoot = new Object();
         private OracleConnection connection = null;
         private DataReaderEncoder encoder;
+        private string exception = "";
 
         protected SQLConnectionHandler(){}
 
@@ -34,6 +35,7 @@ namespace Server.Controllers.SQLUtils
 
         public SQLConnectionHandler Execute(String command)
         {
+            exception = "";
             try
             {
                 if (connection != null)
@@ -49,7 +51,7 @@ namespace Server.Controllers.SQLUtils
             }
             catch(Oracle.ManagedDataAccess.Client.OracleException ex)
             {
-                Console.WriteLine(ex.DataSource);
+                exception = ex.DataSource;
                 return this;
             }
             return this;
@@ -57,7 +59,9 @@ namespace Server.Controllers.SQLUtils
 
         public SQLResult GetResult()
         {
-            return encoder.GetData();
+            var r = encoder.GetData();
+            r.Exception = exception;
+            return r;
         }
     }
 }

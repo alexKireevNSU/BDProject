@@ -17,6 +17,8 @@ namespace Server.Controllers.SQLUtils
         {
             var hasRows = reader.HasRows;
             result = new SQLResult();
+            if (!hasRows)
+                return this;
             bool isFirst = true;
             while(reader.Read())
             {

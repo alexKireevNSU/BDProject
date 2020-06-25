@@ -1,0 +1,1 @@
+﻿SELECT * FROM VTradePointsFullnames WHERE "Is Barren" = 'N'

@@ -44,5 +44,20 @@ namespace Server.Controllers
                     .Execute(SQLCommand.DeleteTradePoint(point));
             return true;
         }
+
+        [HttpGet]
+        public JsonResult GetParents()
+        {
+            return Json(SQLConnectionHandler.GetInstance()
+                    .Execute(SQLCommand.SelectAllParents()).GetResult(), JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public JsonResult GetParent(int id)
+        {
+            return Json(SQLConnectionHandler.GetInstance()
+                    .Execute(SQLCommand.SelectParent(id)).GetResult(), JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

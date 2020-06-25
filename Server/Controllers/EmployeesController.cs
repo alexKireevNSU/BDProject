@@ -25,6 +25,8 @@ namespace Server.Controllers
         {
             SQLConnectionHandler.GetInstance()
                     .Execute(SQLCommand.InsertEmployee(employee));
+            SQLConnectionHandler.GetInstance()
+                    .Execute(SQLCommand.InsertEmployeesList(employee));
             return true;
         }
 
@@ -35,6 +37,8 @@ namespace Server.Controllers
                 return false;
             SQLConnectionHandler.GetInstance()
                     .Execute(SQLCommand.UpdateEmployee(employee));
+            SQLConnectionHandler.GetInstance()
+                    .Execute(SQLCommand.UpdateEmployeesList(employee));
             return true;
         }
 

@@ -1,0 +1,1 @@
+﻿DELETE FROM TTradePointsPayments WHERE TPPID = {0}

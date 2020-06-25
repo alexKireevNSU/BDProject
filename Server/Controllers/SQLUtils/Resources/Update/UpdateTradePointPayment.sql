@@ -1,0 +1,1 @@
+﻿UPDATE ttradepointspayments SET name = '{0}', psum = {1}, pdate = TO_DATE('{2}', 'yyyy/mm/dd') WHERE TPPID = {3};

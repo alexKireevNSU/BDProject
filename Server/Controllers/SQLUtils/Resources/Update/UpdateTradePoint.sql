@@ -1,1 +1,1 @@
-﻿UPDATE TTradePoints SET name = '{0}', TypeID = {1} WHERE TPID = {2}
+﻿UPDATE VTradePoints Set "Name" = '{0}', "Type ID" = {1}, "Size" = {2}, "Number Of Counters" = {3} where "ID" = {4}

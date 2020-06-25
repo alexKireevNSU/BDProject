@@ -1,1 +1,1 @@
-﻿INSERT INTO TTradePoints VALUES(DEFAULT, '{0}', {1})
+﻿INSERT INTO VTradePoints VALUES(DEFAULT, '{0}', {1}, {2}, {3})
