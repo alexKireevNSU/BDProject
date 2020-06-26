@@ -1,0 +1,1 @@
+﻿DELETE FROM TOrders WHERE OrderID = {0}

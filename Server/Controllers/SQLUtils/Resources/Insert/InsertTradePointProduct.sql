@@ -1,0 +1,1 @@
+﻿INSERT INTO TTradePointsProducts VALUES(DEFAULT, {0}, {1}, {2}, {3}, {4})

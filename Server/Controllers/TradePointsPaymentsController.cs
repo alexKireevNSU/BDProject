@@ -21,7 +21,7 @@ namespace Server.Controllers
         public JsonResult Delete(int id)
         {
             return Json(SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.DeleteTradePointPayment(id)).GetResult(), JsonRequestBehavior.AllowGet);
+                    .Execute(SQLCommand.DeleteTradePointPayment(id), true).GetResult(), JsonRequestBehavior.AllowGet);
         }
         [HttpPost]
         public bool Insert(TradePointPayment payment)
@@ -29,7 +29,7 @@ namespace Server.Controllers
             if (payment.Id < 0)
                 return false;
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.InsertTradePointPayment(payment));
+                    .Execute(SQLCommand.InsertTradePointPayment(payment), true);
             return true;
         }
         [HttpPost]
@@ -38,7 +38,7 @@ namespace Server.Controllers
             if (payment.Id < 0)
                 return false;
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.UpdateTradePointPayment(payment));
+                    .Execute(SQLCommand.UpdateTradePointPayment(payment), true);
             return true;
         }
     }

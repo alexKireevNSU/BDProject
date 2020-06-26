@@ -24,7 +24,7 @@ namespace Server.Controllers
         public bool Insert(ObjectRelation relation)
         {
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.InsertObjectsRelations(relation));
+                    .Execute(SQLCommand.InsertObjectsRelations(relation), true);
             return true;
         }
 
@@ -34,7 +34,7 @@ namespace Server.Controllers
             if (relation.Id < 0)
                 return false;
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.UpdateObjectsRelations(relation));
+                    .Execute(SQLCommand.UpdateObjectsRelations(relation), true);
             return true;
         }
 
@@ -44,7 +44,7 @@ namespace Server.Controllers
             if (relation.Id < 0)
                 return false;
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.DeleteObjectsRelations(relation));
+                    .Execute(SQLCommand.DeleteObjectsRelations(relation), true);
             return true;
         }
     }

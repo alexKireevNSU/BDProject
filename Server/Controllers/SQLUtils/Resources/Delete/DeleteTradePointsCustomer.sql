@@ -1,0 +1,1 @@
+﻿DELETE FROM TTradePointsCustomers WHERE CuID = {0}

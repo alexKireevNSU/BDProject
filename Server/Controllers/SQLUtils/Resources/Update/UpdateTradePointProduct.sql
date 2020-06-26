@@ -1,0 +1,1 @@
+﻿UPDATE TTradePointsProducts SET TRID = {0}, PrID = {1}, SuID = {2}, pCount = {3}, price = {4} WHERE TPPID = {5}

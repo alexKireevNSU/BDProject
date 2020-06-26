@@ -14,7 +14,7 @@ namespace Server.Controllers.SQLUtils.Entities
         public int tradePointId = -1;
         public string name = String.Empty;
         public double sum = 0;
-        public DateTime date = DateTime.MinValue;
+        public DateTime date = DateTime.Today;
 
         public int Id
         {

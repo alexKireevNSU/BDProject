@@ -22,9 +22,5 @@ namespace Client.ViewModel
 
             _MainCodeBehind = codeBehind;
         }
-
-        //Properties
-
-        //Commands
     }
 }

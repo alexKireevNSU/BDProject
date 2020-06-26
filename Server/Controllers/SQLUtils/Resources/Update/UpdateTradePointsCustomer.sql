@@ -1,0 +1,1 @@
+﻿UPDATE TTradePointsCustomers SET name = '{0}', description = '{1}' WHERE CuID = {2}

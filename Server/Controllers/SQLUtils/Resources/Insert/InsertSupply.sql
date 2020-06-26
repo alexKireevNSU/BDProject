@@ -1,0 +1,1 @@
+﻿INSERT INTO TSuppliesDistribution VALUES(DEFAULT, {0}, {1}, {2}, {3}, {4}, {5}, TO_DATE('{6}', 'yyyy/mm/dd'))

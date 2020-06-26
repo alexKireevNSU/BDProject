@@ -71,7 +71,7 @@ namespace Client.Controllers
 
         }
 
-        internal void AddEmployee(Employee employee)
+        public void AddEmployee(Employee employee)
         {
             if (employee == null)
                 return;

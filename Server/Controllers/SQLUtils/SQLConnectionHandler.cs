@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Security.Cryptography;
 
 namespace Server.Controllers.SQLUtils
 {
@@ -12,6 +13,9 @@ namespace Server.Controllers.SQLUtils
         private OracleConnection connection = null;
         private DataReaderEncoder encoder;
         private string exception = "";
+        private Dictionary<string, SQLResult> cachedCommands = new Dictionary<string, SQLResult>();
+        private string lastCommand = String.Empty;
+        
 
         protected SQLConnectionHandler(){}
 
@@ -33,8 +37,26 @@ namespace Server.Controllers.SQLUtils
             this.connection = conn;
         }
 
-        public SQLConnectionHandler Execute(String command)
+        public SQLConnectionHandler Execute(String command, bool dropCache = false)
         {
+            lastCommand = command;
+            if (dropCache)
+                cachedCommands.Clear();
+
+            SQLResult cachedResult = null;
+            if (cachedCommands.ContainsKey(command))
+            {
+                try
+                {
+                    cachedResult = cachedCommands[command];
+                    if (cachedResult != null)
+                        encoder.SetData(cachedResult);
+                    return this;
+                }
+                catch (Exception ex)
+                {}
+            }
+            
             exception = "";
             try
             {
@@ -48,12 +70,14 @@ namespace Server.Controllers.SQLUtils
                         encoder.encode();
                     }
                 }
+
             }
             catch(Oracle.ManagedDataAccess.Client.OracleException ex)
             {
                 exception = ex.DataSource;
                 return this;
             }
+            
             return this;
         }
 
@@ -61,6 +85,7 @@ namespace Server.Controllers.SQLUtils
         {
             var r = encoder.GetData();
             r.Exception = exception;
+            cachedCommands[lastCommand] = r;
             return r;
         }
     }

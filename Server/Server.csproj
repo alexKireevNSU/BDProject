@@ -301,10 +301,17 @@
     <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteObjectsRelations.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteOrder.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteProduct.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteSupplier.sql" />
     <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteTradePoint.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteTradePointPayment.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteTradePointProduct.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteTradePointRequest.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteTradePointSale.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteTradePointsCustomer.sql" />
     <Content Include="Controllers\SQLUtils\Resources\Delete\DeleteTradePointType.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -320,10 +327,18 @@
     <Content Include="Controllers\SQLUtils\Resources\Insert\InsertObjectsRelations.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertOrder.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertProduct.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertSupplier.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertSupply.sql" />
     <Content Include="Controllers\SQLUtils\Resources\Insert\InsertTradePoint.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Controllers\SQLUtils\Resources\Insert\InsertTradePointPayment.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertTradePointProduct.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertTradePointRequest.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertTradePointSale.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Insert\InsertTradePointsCustomer.sql" />
     <Content Include="Controllers\SQLUtils\Resources\Insert\InsertTradePointType.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -336,10 +351,14 @@
     <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllObjectsRelations.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllOrders.sql" />
     <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllParents.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllProducts.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllSuppliers.sql" />
     <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllTradePoints.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllTradePointsCustomers.sql" />
     <Content Include="Controllers\SQLUtils\Resources\Select\SelectAllTradePointsTypes.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -348,6 +367,9 @@
     </Content>
     <Content Include="Controllers\SQLUtils\Resources\Select\SelectParent.sql" />
     <Content Include="Controllers\SQLUtils\Resources\Select\SelectTradePointPayments.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Select\SelectTradePointProducts.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Select\SelectTradePointRequests.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Select\SelectTradePointSales.sql" />
     <Content Include="Controllers\SQLUtils\Resources\Update\UpdateEmployees.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -360,10 +382,17 @@
     <Content Include="Controllers\SQLUtils\Resources\Update\UpdateObjectsRelations.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateOrder.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateProduct.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateSupplier.sql" />
     <Content Include="Controllers\SQLUtils\Resources\Update\UpdateTradePoint.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Controllers\SQLUtils\Resources\Update\UpdateTradePointPayment.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateTradePointProduct.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateTradePointRequest.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateTradePointSale.sql" />
+    <Content Include="Controllers\SQLUtils\Resources\Update\UpdateTradePointsCustomer.sql" />
     <Content Include="Controllers\SQLUtils\Resources\Update\UpdateTradePointType.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -379,6 +408,8 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\ObjectRelationsController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\SQLUtils\DataReaderEncoder.cs" />
     <Compile Include="Controllers\SQLUtils\DBOracleUtils.cs" />
     <Compile Include="Controllers\SQLUtils\DBUtils.cs" />
@@ -386,14 +417,30 @@
     <Compile Include="Controllers\SQLUtils\Entities\Employee.cs" />
     <Compile Include="Controllers\SQLUtils\Entities\EmployeePosition.cs" />
     <Compile Include="Controllers\SQLUtils\Entities\ObjectRelation.cs" />
+    <Compile Include="Controllers\SQLUtils\Entities\Order.cs" />
+    <Compile Include="Controllers\SQLUtils\Entities\Product.cs" />
+    <Compile Include="Controllers\SQLUtils\Entities\SupplierProduct.cs" />
+    <Compile Include="Controllers\SQLUtils\Entities\Supply.cs" />
+    <Compile Include="Controllers\SQLUtils\Entities\Supplier.cs" />
     <Compile Include="Controllers\SQLUtils\Entities\TradePoint.cs" />
+    <Compile Include="Controllers\SQLUtils\Entities\TradePointCustomer.cs" />
     <Compile Include="Controllers\SQLUtils\Entities\TradePointPayment.cs" />
+    <Compile Include="Controllers\SQLUtils\Entities\TradePointProduct.cs" />
+    <Compile Include="Controllers\SQLUtils\Entities\TradePointRequest.cs" />
+    <Compile Include="Controllers\SQLUtils\Entities\TradePointSale.cs" />
     <Compile Include="Controllers\SQLUtils\Entities\TradePointType.cs" />
     <Compile Include="Controllers\SQLUtils\SQLCommand.cs" />
     <Compile Include="Controllers\SQLUtils\SQLConnectionHandler.cs" />
     <Compile Include="Controllers\SQLUtils\SQLResult.cs" />
+    <Compile Include="Controllers\SuppliersController.cs" />
+    <Compile Include="Controllers\SuppliesController.cs" />
     <Compile Include="Controllers\TradePointsController.cs" />
+    <Compile Include="Controllers\TradePointsCustomersController.cs" />
+    <Compile Include="Controllers\TradePointsCustomersPurchasesController.cs" />
     <Compile Include="Controllers\TradePointsPaymentsController.cs" />
+    <Compile Include="Controllers\TradePointsProductsController.cs" />
+    <Compile Include="Controllers\TradePointsRequestsController.cs" />
+    <Compile Include="Controllers\TradePointsSalesController.cs" />
     <Compile Include="Controllers\TradePointsTypesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -411,7 +458,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Orders\" />
+    <Folder Include="Views\Products\" />
+    <Folder Include="Views\Suppliers\" />
+    <Folder Include="Views\Supplies\" />
+    <Folder Include="Views\TradePointsCustomersPurchases\" />
+    <Folder Include="Views\TradePointsCustomers\" />
     <Folder Include="Views\TradePointsPayments\" />
+    <Folder Include="Views\TradePointsProducts\" />
+    <Folder Include="Views\TradePointsRequests\" />
+    <Folder Include="Views\TradePointsSales\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

@@ -1,0 +1,1 @@
+﻿UPDATE TTradePointsSales SET pCount = {0}, saleDate = TO_DATE('{1}', 'yyyy/mm/dd'), TPPID = {2} WHERE SaleID = {3}

@@ -1,0 +1,1 @@
+﻿DELETE FROM TTradePointsProducts WHERE TPPID = {0}

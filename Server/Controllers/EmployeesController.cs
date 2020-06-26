@@ -24,9 +24,9 @@ namespace Server.Controllers
         public bool Insert(Employee employee)
         {
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.InsertEmployee(employee));
+                    .Execute(SQLCommand.InsertEmployee(employee), true);
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.InsertEmployeesList(employee));
+                    .Execute(SQLCommand.InsertEmployeesList(employee), true);
             return true;
         }
 
@@ -36,9 +36,9 @@ namespace Server.Controllers
             if (employee.Id < 0)
                 return false;
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.UpdateEmployee(employee));
+                    .Execute(SQLCommand.UpdateEmployee(employee), true);
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.UpdateEmployeesList(employee));
+                    .Execute(SQLCommand.UpdateEmployeesList(employee), true);
             return true;
         }
 
@@ -48,7 +48,7 @@ namespace Server.Controllers
             if (employee.Id < 0)
                 return false;
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.DeleteEmployee(employee));
+                    .Execute(SQLCommand.DeleteEmployee(employee), true);
             return true;
         }
     }

@@ -1,0 +1,1 @@
+﻿UPDATE TSuppliers SET name = '{0}' WHERE SuID = {1}

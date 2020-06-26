@@ -89,15 +89,43 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Admin\OrdersUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\ProductsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\SuppliersUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\SuppliesUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\TradePointsCustomersUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Admin\TradePointsPaymentsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Admin\TradePointsUC.xaml">
+    <Page Include="View\Admin\TradePointsProductsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\CommonWindows\AddEntityWindow.xaml">
+    <Page Include="View\Admin\TradePointsRequestsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\TradePointsSalesUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\TradePointsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,7 +142,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ServerHandler.cs" />
+    <Compile Include="Controllers\SuppliersController.cs" />
+    <Compile Include="Controllers\SuppliesController.cs" />
+    <Compile Include="Controllers\TradePointCustomersController.cs" />
     <Compile Include="Controllers\TradePointsController.cs" />
     <Compile Include="ViewModel\EmployeesViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -131,14 +164,35 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\MenuViewModel.cs" />
+    <Compile Include="View\Admin\OrdersUC.xaml.cs">
+      <DependentUpon>OrdersUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\ProductsUC.xaml.cs">
+      <DependentUpon>ProductsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\SuppliersUC.xaml.cs">
+      <DependentUpon>SuppliersUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\SuppliesUC.xaml.cs">
+      <DependentUpon>SuppliesUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\TradePointsCustomersUC.xaml.cs">
+      <DependentUpon>TradePointsCustomersUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Admin\TradePointsPaymentsUC.xaml.cs">
       <DependentUpon>TradePointsPaymentsUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\TradePointsProductsUC.xaml.cs">
+      <DependentUpon>TradePointsProductsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\TradePointsRequestsUC.xaml.cs">
+      <DependentUpon>TradePointsRequestsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\TradePointsSalesUC.xaml.cs">
+      <DependentUpon>TradePointsSalesUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Admin\TradePointsUC.xaml.cs">
       <DependentUpon>TradePointsUC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\CommonWindows\AddEntityWindow.xaml.cs">
-      <DependentUpon>AddEntityWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\CommonWindows\EditEntityWindow.xaml.cs">
       <DependentUpon>EditEntityWindow.xaml</DependentUpon>

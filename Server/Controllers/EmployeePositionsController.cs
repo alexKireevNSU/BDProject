@@ -23,7 +23,7 @@ namespace Server.Controllers.SQLUtils
         public bool Insert(EmployeePosition position)
         {
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.InsertEmployeesPositions(position));
+                    .Execute(SQLCommand.InsertEmployeesPositions(position), true);
             return true;
         }
 
@@ -33,7 +33,7 @@ namespace Server.Controllers.SQLUtils
             if (position.Id < 0)
                 return false;
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.UpdateEmployeesPositions(position));
+                    .Execute(SQLCommand.UpdateEmployeesPositions(position), true);
             return true;
         }
 
@@ -43,7 +43,7 @@ namespace Server.Controllers.SQLUtils
             if (position.Id < 0)
                 return false;
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.DeleteEmployeesPositions(position));
+                    .Execute(SQLCommand.DeleteEmployeesPositions(position), true);
             return true;
         }
     }

@@ -1,0 +1,1 @@
+﻿SELECT * FROM VTradePointsSales WHERE TPID = {0}

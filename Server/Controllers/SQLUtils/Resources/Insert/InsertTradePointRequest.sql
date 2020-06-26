@@ -1,0 +1,1 @@
+﻿INSERT INTO TTradePointsRequests VALUES(DEFAULT, {0}, {1}, {2}, {3})

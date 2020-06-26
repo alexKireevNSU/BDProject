@@ -1,0 +1,1 @@
+﻿INSERT INTO TSuppliers VALUES(DEFAULT, '{0}');

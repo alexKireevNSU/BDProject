@@ -1,0 +1,1 @@
+﻿UPDATE TProducts SET name = '{0}' WHERE PrID = {1}

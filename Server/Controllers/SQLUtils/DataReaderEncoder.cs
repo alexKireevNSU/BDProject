@@ -39,6 +39,11 @@ namespace Server.Controllers.SQLUtils
             return result;
         }
 
+        public void SetData(SQLResult data)
+        {
+            result = data;
+        }
+
         private OracleDataReader reader;
         private SQLResult result;
     }

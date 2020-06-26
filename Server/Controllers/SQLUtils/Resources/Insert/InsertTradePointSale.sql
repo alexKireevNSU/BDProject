@@ -1,0 +1,1 @@
+﻿INSERT INTO TTradePointsSales VALUES(DEFAULT, {0}, TO_DATE('{1}', 'yyyy/mm/dd'), {2})

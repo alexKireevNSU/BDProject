@@ -13,7 +13,7 @@
                   ItemsSource="{Binding TradePoints}" 
                   DisplayMemberPath="FullName" 
                   SelectedValuePath="FullName" 
-                  SelectedValue="{Binding TradePoint}" DropDownClosed="TradePointComboBo1x_DropDownClosed"/>?
+                  SelectedValue="{Binding TradePoint}" DropDownClosed="TradePointComboBox_DropDownClosed"/>
         <ListBox MaxHeight="700" Width="1200" x:Name="TradePointPaymentsList" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto">
             <ListBox.ItemTemplate>
                 <DataTemplate>

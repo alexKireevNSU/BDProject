@@ -22,7 +22,7 @@ namespace Client.View.Admin
     {
         ObservableCollection<TradePoint> TradePoints = new ObservableCollection<TradePoint>();
         TradePoint TradePoint = null;
-        private ObservableCollection<TradePointPayment> tradePointPayments = new ObservableCollection<TradePointPayment>();
+        private ObservableCollection<TradePointPayment> collection = new ObservableCollection<TradePointPayment>();
 
         public TradePointsPaymentsUC()
         {
@@ -44,9 +44,9 @@ namespace Client.View.Admin
         {
             List<TradePointPayment> tradePointPaymentsList = TradePointsController.GetInstance().GetTradePointPayments(TradePointComboBox.SelectedItem as TradePoint);
             tradePointPaymentsList.Sort((x, y) => x.Date.CompareTo(y.Date));
-            tradePointPayments = new ObservableCollection<TradePointPayment>(tradePointPaymentsList);
+            collection = new ObservableCollection<TradePointPayment>(tradePointPaymentsList);
 
-            TradePointPaymentsList.ItemsSource = tradePointPayments;
+            TradePointPaymentsList.ItemsSource = collection;
             TradePointPaymentsList.Items.Refresh();
             TradePointPaymentsList.UpdateLayout();
         }
@@ -67,11 +67,11 @@ namespace Client.View.Admin
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-            var tradePointPayment = GetTradePointPaymentByButton(sender as Button);
-            if (tradePointPayment == null)
+            var ent = GetTradePointPaymentByButton(sender as Button);
+            if (ent == null)
                 return;
 
-            Window window = new EditEntityWindow(this, tradePointPayment);
+            Window window = new EditEntityWindow(this, ent);
             window.Show();
         }
 

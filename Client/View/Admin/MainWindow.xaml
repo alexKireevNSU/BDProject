@@ -23,9 +23,42 @@
             <Button Command="{Binding LoadTradePointsUCCommand, Mode=OneTime}"
                     Content="Trade Points"
                     Margin="10" Width="70" Height="30" HorizontalAlignment="Left"/>
-            
+
             <Button Command="{Binding LoadTradePointsPaymentsUCCommand, Mode=OneTime}"
                     Content="Payments"
+                    Margin="10" Width="70" Height="30" HorizontalAlignment="Left"/>
+
+            <Button Command="{Binding LoadTradePointsSalesUCCommand, Mode=OneTime}"
+                    Content="Sales"
+                    Margin="10" Width="70" Height="30" HorizontalAlignment="Left"/>
+
+            <Button Command="{Binding LoadTradePointsCustomersUCCommand, Mode=OneTime}"
+                    Content="Customers"
+                    Margin="10" Width="70" Height="30" HorizontalAlignment="Left"/>
+
+            <Button Command="{Binding LoadProductsUCCommand, Mode=OneTime}"
+                    Content="Products"
+                    Margin="10" Width="70" Height="30" HorizontalAlignment="Left"/>
+
+            <Button Command="{Binding LoadSuppliersUCCommand, Mode=OneTime}"
+                    Content="Suppliers"
+                    Margin="10" Width="70" Height="30" HorizontalAlignment="Left"/>
+
+            <Button Command="{Binding LoadTradePointsProductsUCCommand, Mode=OneTime}"
+                    Content="TP Products"
+                    Margin="10" Width="70" Height="30" HorizontalAlignment="Left"/>
+
+
+            <Button Command="{Binding LoadTradePointsRequestsUCCommand, Mode=OneTime}"
+                    Content="Requests"
+                    Margin="10" Width="70" Height="30" HorizontalAlignment="Left"/>
+
+            <Button Command="{Binding LoadOrdersUCCommand, Mode=OneTime}"
+                    Content="Orders"
+                    Margin="10" Width="70" Height="30" HorizontalAlignment="Left"/>
+
+            <Button Command="{Binding LoadSuppliesUCCommand, Mode=OneTime}"
+                    Content="Supplies"
                     Margin="10" Width="70" Height="30" HorizontalAlignment="Left"/>
         </StackPanel>
         <!--Контент-->

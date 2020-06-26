@@ -23,7 +23,7 @@ namespace Server.Controllers
         public bool Insert(TradePointType type)
         {
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.InsertTradePointType(type));
+                    .Execute(SQLCommand.InsertTradePointType(type), true);
             return true;
         }
 
@@ -33,7 +33,7 @@ namespace Server.Controllers
             if (type.Id < 0)
                 return false;
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.UpdateTradePointType(type));
+                    .Execute(SQLCommand.UpdateTradePointType(type), true);
             return true;
         }
 
@@ -43,7 +43,7 @@ namespace Server.Controllers
             if (type.Id < 0)
                 return false;
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.DeleteTradePointType(type));
+                    .Execute(SQLCommand.DeleteTradePointType(type), true);
             return true;
         }
 

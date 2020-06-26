@@ -1,0 +1,1 @@
+﻿DELETE FROM TTradePointsRequests WHERE RequestID = {0}

@@ -1,0 +1,1 @@
+﻿INSERT INTO TProducts VALUES(DEFAULT, '{0}');

@@ -1,0 +1,1 @@
+﻿UPDATE TTradePointsRequests SET TPID = {0}, PrID = {1}, pCount = {2}, SuID = {3} WHERE RequestID = {4}

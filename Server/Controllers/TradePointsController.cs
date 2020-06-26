@@ -21,7 +21,7 @@ namespace Server.Controllers
         public bool Insert(TradePoint point)
         {
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.InsertTradePoint(point));
+                    .Execute(SQLCommand.InsertTradePoint(point), true);
             return true;
         }
 
@@ -31,7 +31,7 @@ namespace Server.Controllers
             if (point.Id < 0)
                 return false;
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.UpdateTradePoint(point));
+                    .Execute(SQLCommand.UpdateTradePoint(point), true);
             return true;
         }
 
@@ -41,7 +41,7 @@ namespace Server.Controllers
             if (point.Id < 0)
                 return false;
             SQLConnectionHandler.GetInstance()
-                    .Execute(SQLCommand.DeleteTradePoint(point));
+                    .Execute(SQLCommand.DeleteTradePoint(point), true);
             return true;
         }
 

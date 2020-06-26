@@ -73,6 +73,150 @@ namespace Client.View.Admin
             CodeBehind.LoadView(ViewType.TradePointsPayments);
         }
 
+        private RelayCommand _LoadTradePointsSalesUCCommand;
+        public RelayCommand LoadTradePointsSalesUCCommand
+        {
+            get
+            {
+                return _LoadTradePointsSalesUCCommand = _LoadTradePointsSalesUCCommand ??
+                  new RelayCommand(OnLoadTradePointsSalesUC, CanLoadTradePointsSalesUC);
+            }
+        }
+        private bool CanLoadTradePointsSalesUC()
+        {
+            return true;
+        }
+        private void OnLoadTradePointsSalesUC()
+        {
+            CodeBehind.LoadView(ViewType.TradePointsSales);
+        }
+
+        private RelayCommand _LoadTradePointsProductsUCCommand;
+        public RelayCommand LoadTradePointsProductsUCCommand
+        {
+            get
+            {
+                return _LoadTradePointsProductsUCCommand = _LoadTradePointsProductsUCCommand ??
+                  new RelayCommand(OnLoadTradePointsProductsUC, CanLoadTradePointsProductsUC);
+            }
+        }
+        private bool CanLoadTradePointsProductsUC()
+        {
+            return true;
+        }
+        private void OnLoadTradePointsProductsUC()
+        {
+            CodeBehind.LoadView(ViewType.TradePointsProducts);
+        }
+
+        private RelayCommand _LoadTradePointsCustomersUCCommand;
+        public RelayCommand LoadTradePointsCustomersUCCommand
+        {
+            get
+            {
+                return _LoadTradePointsCustomersUCCommand = _LoadTradePointsCustomersUCCommand ??
+                  new RelayCommand(OnLoadTradePointsCustomersUC, CanLoadTradePointsCustomersUC);
+            }
+        }
+        private bool CanLoadTradePointsCustomersUC()
+        {
+            return true;
+        }
+        private void OnLoadTradePointsCustomersUC()
+        {
+            CodeBehind.LoadView(ViewType.TradePointsCustomers);
+        }
+
+        private RelayCommand _LoadSuppliersUCCommand;
+        public RelayCommand LoadSuppliersUCCommand
+        {
+            get
+            {
+                return _LoadSuppliersUCCommand = _LoadSuppliersUCCommand ??
+                  new RelayCommand(OnLoadSuppliersUC, CanLoadSuppliersUC);
+            }
+        }
+        private bool CanLoadSuppliersUC()
+        {
+            return true;
+        }
+        private void OnLoadSuppliersUC()
+        {
+            CodeBehind.LoadView(ViewType.Suppliers);
+        }
+
+        private RelayCommand _LoadProductsUCCommand;
+        public RelayCommand LoadProductsUCCommand
+        {
+            get
+            {
+                return _LoadProductsUCCommand = _LoadProductsUCCommand ??
+                  new RelayCommand(OnLoadProductsUC, CanLoadProductsUC);
+            }
+        }
+        private bool CanLoadProductsUC()
+        {
+            return true;
+        }
+        private void OnLoadProductsUC()
+        {
+            CodeBehind.LoadView(ViewType.Products);
+        }
+
+        private RelayCommand _LoadTradePointsRequestsUCCommand;
+        public RelayCommand LoadTradePointsRequestsUCCommand
+        {
+            get
+            {
+                return _LoadTradePointsRequestsUCCommand = _LoadTradePointsRequestsUCCommand ??
+                  new RelayCommand(OnLoadTradePointsRequestsUC, CanLoadTradePointsRequestsUC);
+            }
+        }
+        private bool CanLoadTradePointsRequestsUC()
+        {
+            return true;
+        }
+        private void OnLoadTradePointsRequestsUC()
+        {
+            CodeBehind.LoadView(ViewType.TradePointsRequests);
+        }
+
+        private RelayCommand _LoadOrdersUCCommand;
+        public RelayCommand LoadOrdersUCCommand
+        {
+            get
+            {
+                return _LoadOrdersUCCommand = _LoadOrdersUCCommand ??
+                  new RelayCommand(OnLoadOrdersUC, CanLoadOrdersUC);
+            }
+        }
+        private bool CanLoadOrdersUC()
+        {
+            return true;
+        }
+        private void OnLoadOrdersUC()
+        {
+            CodeBehind.LoadView(ViewType.Orders);
+        }
+
+        private RelayCommand _LoadSuppliesUCCommand;
+        public RelayCommand LoadSuppliesUCCommand
+        {
+            get
+            {
+                return _LoadSuppliesUCCommand = _LoadSuppliesUCCommand ??
+                  new RelayCommand(OnLoadSuppliesUC, CanLoadSuppliesUC);
+            }
+        }
+        private bool CanLoadSuppliesUC()
+        {
+            return true;
+        }
+        private void OnLoadSuppliesUC()
+        {
+            CodeBehind.LoadView(ViewType.Supplies);
+        }
+
         private RelayCommand _LoadMainUCCommand;
         public RelayCommand LoadMainUCCommand
         {

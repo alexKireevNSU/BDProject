@@ -28,7 +28,15 @@ namespace Client.View.Admin
         Main,
         Employees,
         TradePoints,
-        TradePointsPayments
+        TradePointsPayments,
+        TradePointsProducts,
+        TradePointsSales,
+        TradePointsCustomers,
+        Suppliers,
+        Products,
+        TradePointsRequests,
+        Orders,
+        Supplies
     }
 
     /// <summary>
@@ -57,32 +65,53 @@ namespace Client.View.Admin
 
         public void LoadView(ViewType typeView)
         {
+            UserControl uc = null;
+            MainViewModel vm = new MainViewModel(this);
+     
             switch (typeView)
             {
                 case ViewType.Main:
-                    MainUC view = new MainUC();
-                    MainViewModel vm = new MainViewModel(this);
-                    view.DataContext = vm;
-                    this.OutputView.Content = view;
+                    uc = new MainUC();
                     break;
                 case ViewType.Employees:
-                    EmployeesUC viewF = new EmployeesUC();
-                    EmployeesViewModel vmF = new EmployeesViewModel(this);
-                    viewF.DataContext = vmF;
-                    this.OutputView.Content = viewF;
+                    uc = new EmployeesUC();
                     break;
                 case ViewType.TradePoints:
-                    TradePointsUC tradePointsUC = new TradePointsUC();
-                    TradePointsViewModel tradePointsViewModel = new TradePointsViewModel(this);
-                    tradePointsUC.DataContext = tradePointsViewModel;
-                    this.OutputView.Content = tradePointsUC;
+                    uc = new TradePointsUC();
                     break;
                 case ViewType.TradePointsPayments:
-                    TradePointsPaymentsUC tradePointsPaymentsUC = new TradePointsPaymentsUC();
-                    TradePointsPaymentsViewModel tradePointsPaymentsViewModel = new TradePointsPaymentsViewModel(this);
-                    tradePointsPaymentsUC.DataContext = tradePointsPaymentsViewModel;
-                    this.OutputView.Content = tradePointsPaymentsUC;
+                    uc = new TradePointsPaymentsUC();
                     break;
+                case ViewType.TradePointsSales:
+                    uc = new TradePointsSalesUC();
+                    break;
+                case ViewType.TradePointsProducts:
+                    uc = new TradePointsProductsUC();
+                    break;
+                case ViewType.TradePointsCustomers:
+                    uc = new TradePointsCustomersUC();
+                    break;
+                case ViewType.Suppliers:
+                    uc = new SuppliersUC();
+                    break;
+                case ViewType.Products:
+                    uc = new ProductsUC();
+                    break;
+                case ViewType.TradePointsRequests:
+                    uc = new TradePointsRequestsUC();
+                    break;
+                case ViewType.Orders:
+                    uc = new OrdersUC();
+                    break;
+                case ViewType.Supplies:
+                    uc = new SuppliesUC();
+                    break;
+
+            }
+            if (uc != null)
+            {
+                uc.DataContext = vm;
+                this.OutputView.Content = uc;
             }
         }
     }

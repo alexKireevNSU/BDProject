@@ -12,6 +12,8 @@ namespace Server.Controllers.SQLUtils.Entities
     {
         public int id = -1;
         public string name = String.Empty;
+        public string description = String.Empty;
+        public List<TradePointSale> sales = new List<TradePointSale>();
 
         public int Id
         {
@@ -41,6 +43,36 @@ namespace Server.Controllers.SQLUtils.Entities
             get
             {
                 return this.name;
+            }
+        }
+        public string Description
+        {
+            set
+            {
+                if (value != this.description)
+                {
+                    this.description = value;
+                    NotifyPropertyChanged();
+                }
+            }
+            get
+            {
+                return this.description;
+            }
+        }
+        public List<TradePointSale> Sales
+        {
+            set
+            {
+                if (value != this.sales)
+                {
+                    this.sales = value;
+                    NotifyPropertyChanged();
+                }
+            }
+            get
+            {
+                return this.sales;
             }
         }
 
